@@ -1,0 +1,80 @@
+doctype html
+html(lang="en")
+    head
+        style(type="text/css").
+            ul { 
+                list-style-type: none; 
+            } 
+            code { 
+                color: red; 
+            } 
+            body { 
+                font-family: Verdana; 
+                font-size: 13px; 
+                background: #eee; 
+            } 
+            span { 
+                font-size: 23px;
+            }
+            form {
+                margin-bottom: 25px;
+                padding: 15px;
+                background-color: #a3a3a3;
+                display: inline-block;
+                width: 100%;
+                max-width: 540px;
+                border-radius: 3px;
+            }
+            input {
+                display: block;
+                margin-bottom: 10px;
+                padding: 5px;
+                width: 100%;
+                border: 1px solid lightgrey;
+                border-radius: 3px;
+                font-size: 16px;
+            }
+            button {
+                font-size: 16px;
+                border-radius: 3px;
+                background-color: lightgrey;
+                border: 1px solid grey;
+                box-shadow: 2px 2px teal;
+                cursor: pointer;
+            }
+            button:hover {
+                background-color: yellow;
+            }
+            button:active {
+                box-shadow: none;
+            }
+            li {
+                margin-bottom: 5px;
+            }
+
+        link(href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet")
+        link(href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet")
+    body  
+        div.container
+            .row
+                h1 freeCodeCamp API project: File Metadata microservice
+            .row    
+                p Developed by 
+                    a(href='https://www.freecodecamp.com/dickyw71' target='_blank') Richard Wheatley
+            .row
+                a(href='https://www.freecodecamp.com/dickyw71' target='_blank')
+                    img( class='img-responsive img-rounded img-thumbnail' 
+                        src='https://avatars.githubusercontent.com/u/13287196?v=3')
+            .row
+                span
+                    a(href="https://github.com/dickyw71/file-metadata-microservice" target="_blank")
+                        i(class="fa fa-github" aria-hidden="true")
+                span
+                    a(href="https://twitter.com/rich_wheatley" target="_blank")
+                        i(class="fa fa-twitter" aria-hidden="true")
+            form(method="post" name="file-form" enctype="multipart/form-data")
+                label(for="file") Choose a file to upload
+                input(type="file" id="file" name="file" required)
+                input(type="submit" name="submit" value="Upload file")
+
+        script(src="./libs/client.js")
