@@ -72,9 +72,7 @@ html(lang="en")
                 span
                     a(href="https://twitter.com/rich_wheatley" target="_blank")
                         i(class="fa fa-twitter" aria-hidden="true")
-            form(method="post" name="file-form" enctype="multipart/form-data")
+            form(method="post" name="file-form" enctype="multipart/form-data" action="/get-file-size")
                 label(for="file") Choose a file to upload
                 input(type="file" id="file" name="file" required)
                 input(type="submit" name="submit" value="Upload file")
-
-        script(src="./libs/client.js")
