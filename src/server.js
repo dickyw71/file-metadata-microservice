@@ -3,7 +3,7 @@ import multer from 'multer'
 import cors from 'cors'
 
 // setup
-const upload = multer({ dest: 'uploads/'});
+const upload = multer({ dest: './uploads/'});
 
 // app
 const app = express();
@@ -19,7 +19,7 @@ app.get('/', function(req, res) {
 });
 
 // routes
-app.post("/uploads", upload.single('file'), function(request, response) {
+app.post("/get-file-size", upload.single('file'), function(request, response) {
     response.json({
         size: request.file.size
     });
